@@ -13,15 +13,13 @@ class App extends Component {
     };
   }
 
-  show() {
-    this.setState({ showMessage: true });
-  }
+
 
   render() {
     return (
       <div id="main">
         {/* Do not remove this main div!! */}
-        <button id="click" onClick={this.show}>
+        <button id="click" onClick={()=>this.setState({ showMessage: true });}>
           Open
         </button>
         {this.state.showMessage && (
